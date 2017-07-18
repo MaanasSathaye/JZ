@@ -1,0 +1,17 @@
+def main():
+    score = eval(input("What quiz score did you get? Make sure that you enter a number and not anything else! "))
+    letter_grade = ["A", "B", "C", "D", "F"]
+    if 0 <= score <=5:
+        if score == 5:
+            print("Your letter grade is", letter_grade[0])
+        elif score == 4:
+            print("Your letter grade is", letter_grade[1])
+        elif score == 3:
+            print("Your letter grade is", letter_grade[2])
+        elif score == 2:
+            print('Your letter grade is', letter_grade[3])
+        else:
+            print('Your letter grade is', letter_grade[4])
+    elif score>5 or score<0:
+        print("That wasn't a possible score!")
+main()
