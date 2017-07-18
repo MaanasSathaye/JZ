@@ -1,5 +1,5 @@
 def main():
-    score = eval(input("What quiz score did you get? Make sure that you enter a number and not anything else! "))
+    score = eval(input("What quiz score did you get? Make sure that you enter a number and nothing else! "))
     letter_grade = ["A", "B", "C", "D", "F"]
     if 0 <= score <=5:
         if score == 5:
