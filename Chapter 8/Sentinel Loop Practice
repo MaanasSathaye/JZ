@@ -1,0 +1,10 @@
+def main():
+    n = 1
+    mySum = 0
+    sum_to = int(input("To what number would you like the sum of all previous numbers? "))
+    while n < sum_to:
+        mySum += n
+        n += 1
+    print("The sum of all previous numbers before", sum_to, "is", mySum)
+
+main()
