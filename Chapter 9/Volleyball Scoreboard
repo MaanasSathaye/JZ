@@ -1,0 +1,41 @@
+def main():
+    print("This program will record scores and signal when the game is over. Requires user input after each"
+          'point. Teams are represented as Team "A" and Team "B" \n')
+
+    team_a_points = 0
+    team_b_points = 0
+
+    while int(team_a_points) < 25 and int(team_b_points) < 25:
+        question = str(input('Which team won the point? \n'))
+
+        if question == "A" or question == 'a':
+            team_a_points += 1
+            print('Team A has', team_a_points, 'points and Team B has', team_b_points, 'points.')
+        elif question == 'b' or question == 'B':
+            team_b_points += 1
+            print('Team A has', team_a_points, 'points and Team B has', team_b_points, 'points.')
+        else:
+            print('You have entered an option that is not possible. Please try again')
+
+    if (team_a_points >= 25) and (team_a_points - team_b_points) >= 2:
+            print("Game over. Team A has won!")
+    elif (team_b_points >= 25) and (team_b_points - team_a_points) >= 2:
+            print('Game over. Team B has won!')
+    else:
+        while abs(team_b_points-team_a_points) < 2 and abs(team_a_points - team_b_points) < 2:
+            question = str(input('Which team won the point? '))
+            if question == 'A' or question == 'a':
+                team_a_points += 1
+                print('Team A has', team_a_points, 'points and Team B has', team_b_points, 'points.')
+            elif question == "B" or question == 'b':
+                team_b_points += 1
+                print('Team A has', team_a_points, 'points and Team B has', team_b_points, 'points.')
+            else:
+                print('You have entered an option that is not possible. Please try again.')
+        if team_a_points - team_b_points == 2:
+            print("Game over. Team A has won!")
+        elif team_b_points - team_a_points == 2:
+            print("Game over. Team B has won!")
+
+
+main()
