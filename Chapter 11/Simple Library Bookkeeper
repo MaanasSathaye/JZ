@@ -1,0 +1,42 @@
+class Library:
+    #initialization
+    def __init__(self, title):
+        self.title = title
+
+
+#actual library
+books = []
+
+
+
+#accumulator or bookkeeper
+def main():
+    
+    #while loop makes sure that there is another book to ask
+    while True:
+        question = input("Do you have another book to enter? Press enter to exit.")
+        
+        #as long as the input isn't blank, title will be entered into books
+        if question != '':
+            what_is_title = str(input('What is the title? '))
+            book = Library(what_is_title)
+            books.append(book.title)
+            
+            #shows user what books are currently in the library
+            for item in books:
+                print(item)
+         
+         #breaks infinite while loop       
+        elif question == '':
+            break
+            
+    #final         
+    print('Your library contains the following titles \n')
+    for item in books:
+        print(item)
+        
+main()
+
+
+
+
