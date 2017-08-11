@@ -1,0 +1,12 @@
+# Write a function that combines two lists by alternatingly taking elements. For example: given the two lists [a, b, c]
+# and [1, 2, 3], the function should return [a, 1, b, 2, c, 3].
+
+def answer():
+    list_1 = [4,3,6,7]
+    list_2 = ['r', 'd', 'e', 't']
+    list_3 = []
+    n = len(list_1)
+    for i in range(n):
+        list_3.append(list_1[i])
+        list_3.append(list_2[i])
+    print(list_3)
