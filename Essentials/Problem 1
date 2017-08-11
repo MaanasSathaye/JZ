@@ -1,32 +1,26 @@
 #Write three functions that compute the sum of the numbers in a given list using a for-loop, a while-loop, and recursion.
 
-x = [1,2,3,4,5]
+x = [1,2,3,4,5,6,7,8,9]
 
-def first():
-    total = 0
+def first_method():
+    add = 0
     for i in x:
-        total += i
-    print(total)
+        add += i
+    print(add)
 
-'''Must have a beginning to an accumulator. Set a sum before you try to parse'''
+def second_method():
+    add = 0
+    i = 0
+    while i < len(x):
+        add += x[i]
+        i +=1
+    print(add)
 
-def second():
-    total_two = 0
-    z = 0
-    while z < len(x):
-        total_two += x[z]
-        z += 1
-    print(total_two)
-
-'''initialize accumulator AND variable with while loops'''
-
-def get_list(z):
-    if len(z) == 1:
-        return z[0]
+#requires list input
+def third_method(i):
+    if len(i) == 1:
+        return i[0]
     else:
-        return z[0] + get_list(z[1:])
-print(get_list([1,2,3,4,5,6]))
+        return i[0] + third_method(i[1:])
 
-'''creates a function that takes a list as an input. if the length of the list is 1, then it returns the number itself.
-if the length of the list is more than one, it returns the first number PLUS all the other numbers in the listby parsing
-through.'''
+
